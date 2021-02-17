@@ -32,6 +32,8 @@
         </div>
       </nav>
     {% block content %}
+    <!-- if there is a person logged in, I want to display a welcome message once they're redirected here.
+    if not, I am not going to display anything -->
       {% if current_user.is_authenticated %}
       <h1>You are logged in as {{ current_user.name }}</h1>
       {% endif %}

@@ -1,6 +1,7 @@
 {% extends 'index.html' %}
 
 {% block content %}
+<!-- building a form that will post on the login route note that the "name" fields of the inputs are referenced back in the routes.py file-->
 <form method='Post' action="{{ url_for('login') }}">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>

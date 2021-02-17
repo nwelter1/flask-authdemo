@@ -1,10 +1,12 @@
 from app import db, login
 from flask_login import UserMixin
 
+#user loader for login functionality
 @login.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+#Creating user table
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
